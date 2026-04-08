@@ -95,7 +95,7 @@ The core pillars of MLOps on Azure are:
 | Best Practice | Consideration |
 |---|---|
 | **Project structure** | Use the [Team Data Science Process (TDSP)](https://learn.microsoft.com/en-us/azure/architecture/data-science-process/overview) as a lightweight template to organize work across teams. |
-| **Responsible AI documentation** | Establish a **Model Card** or **AI Use Case Description** early — this feeds directly into Responsible AI documentation later. |
+| **Responsible AI documentation** | Establish a **Model Card** or **AI Use Case Description** early, this feeds directly into Responsible AI documentation later. |
 | **Service Level Agreements** | Define **SLAs** for model latency, availability, and retraining frequency before any architecture decisions are made. |
 
 ## Phase 2: Data Management & Preparation
@@ -125,7 +125,7 @@ The core pillars of MLOps on Azure are:
 |---|---|
 | **Dataset versioning** | Register all datasets as **Azure ML Data Assets** so every training run references a versioned, traceable data snapshot. |
 | **Data validation** | Apply data validation checks (schema, row counts, value ranges) as the first step of every pipeline run. Fail fast on bad data. |
-| **Secure storage** | Store sensitive data in **Azure Data Lake Storage Gen2** with hierarchical namespace enabled, access controlled via Azure RBAC and ACLs — never embed credentials in code. |
+| **Secure storage** | Store sensitive data in **Azure Data Lake Storage Gen2** with hierarchical namespace enabled, access controlled via Azure RBAC and ACLs, never embed credentials in code. |
 | **Data protection** | Enable **soft delete** and **versioning** on Azure Blob/ADLS to protect against accidental deletion. |
 
 ## Phase 3: Model Development & Experimentation
@@ -138,7 +138,7 @@ The core pillars of MLOps on Azure are:
 | **Feature selection & engineering** | Iterate on which features move the needle. |
 | **Algorithm selection** | Try multiple algorithms; avoid premature commitment to a complex model. |
 | **Hyperparameter tuning** | Systematic search over the parameter space. |
-| **Experiment tracking** | Log every run — parameters, metrics, artifacts, and environment. |
+| **Experiment tracking** | Log every run, parameters, metrics, artifacts, and environment. |
 
 | Need | Azure Offering Services & Tools|
 |---|---|
@@ -166,7 +166,7 @@ The core pillars of MLOps on Azure are:
 |---|---|
 | **Refactor training code** | Move from notebooks into reusable Python modules/scripts ready for pipeline execution. |
 | **Define an Azure ML Pipeline** | Structure the workflow into discrete, versioned steps: data prep → feature engineering → training → evaluation. |
-| **Parameterize everything** | Externalize data version, hyperparameters, and compute target — nothing hardcoded in scripts. |
+| **Parameterize everything** | Externalize data version, hyperparameters, and compute target, nothing hardcoded in scripts. |
 | **Compute selection** | Choose the right cluster type for the workload: CPU for classical ML, GPU for deep learning. |
 | **Distributed training** | For large models or datasets, configure multi-node training with frameworks like PyTorch DDP or Horovod. |
 
@@ -237,19 +237,19 @@ The core pillars of MLOps on Azure are:
 | **Package the model** | Create a scoring script (`score.py`) and register the serving environment in Azure ML. |
 | **Deploy to staging** | Validate the endpoint behavior against integration tests before routing any production traffic. |
 | **Blue/green or canary deployment** | Gradually shift traffic to the new model version (e.g., 10% → 50% → 100%) to minimize blast radius. |
-| **Rollback plan** | Document and test the rollback procedure before going live — know the exact steps to revert traffic to the previous deployment. |
+| **Rollback plan** | Document and test the rollback procedure before going live, know the exact steps to revert traffic to the previous deployment. |
 
 > [!TIP]
 > For batch workloads, **Batch Endpoints** are significantly more cost-efficient than keeping an online endpoint scaled up. They spin compute up on demand and scale to zero after the job completes.
 
 | Best Practice | Consideration |
 |---|---|
-| **Managed Online Endpoints** | Use Managed Online Endpoints for real-time serving — Microsoft handles provisioning, autoscaling, certificates, and blue/green traffic splitting natively. |
+| **Managed Online Endpoints** | Use Managed Online Endpoints for real-time serving, Microsoft handles provisioning, autoscaling, certificates, and blue/green traffic splitting natively. |
 | **Traffic splitting** | Configure canary deployments at the endpoint level (e.g., 10% new / 90% current) before committing to full promotion. |
 | **Autoscaling** | Scale based on request queue depth and CPU/GPU utilization. Set appropriate min/max instance counts to balance cost and availability. |
-| **Authentication** | Protect all endpoints with **Azure AD authentication** — never expose unauthenticated endpoints in production. |
+| **Authentication** | Protect all endpoints with **Azure AD authentication**, never expose unauthenticated endpoints in production. |
 | **Smoke & integration tests** | Run automated tests against the staging deployment in the CD pipeline before promoting to production. |
-| **Registry-based deployments** | Reference model artifacts from the **Azure ML Model Registry** by name and version — never copy files manually. |
+| **Registry-based deployments** | Reference model artifacts from the **Azure ML Model Registry** by name and version, never copy files manually. |
 
 ## Phase 7: Monitoring & Observability
 
@@ -271,7 +271,7 @@ The core pillars of MLOps on Azure are:
 | **Model Monitors** | Create Azure ML Model Monitors for every production model, scheduled daily or weekly, with alerts when drift exceeds thresholds. |
 | **Application Insights instrumentation** | Instrument the scoring script to log prediction inputs, outputs, and latency for every inference request (subject to data privacy requirements). |
 | **Operational alerts** | Set up Azure Monitor Alerts for P99 latency spikes, error rate increases, and endpoint availability drops. |
-| **Baseline dataset** | Store a baseline dataset (training data or representative sample) at deployment time — Azure ML uses this as the reference distribution for drift calculations. |
+| **Baseline dataset** | Store a baseline dataset (training data or representative sample) at deployment time, Azure ML uses this as the reference distribution for drift calculations. |
 | **Ground truth collection** | Collect and store ground truth labels wherever possible to compute actual model performance metrics in production. |
 
 ## Phase 8: Retraining & Continuous Improvement
@@ -291,7 +291,7 @@ The core pillars of MLOps on Azure are:
 | Key Activity | Description |
 |---|---|
 | **Automated retraining pipeline** | The same parameterized training pipeline from Phase 4 should be fully triggerable via an event or schedule without manual intervention. |
-| **Automated evaluation gate** | The retrained model must pass all evaluation thresholds from Phase 5 before being registered — fail the pipeline otherwise. |
+| **Automated evaluation gate** | The retrained model must pass all evaluation thresholds from Phase 5 before being registered, fail the pipeline otherwise. |
 | **Automated deployment** | A passing model version automatically updates the production endpoint with a canary rollout. |
 | **Human-in-the-loop** | For high-stakes models, include a mandatory human approval step in the CD pipeline before promoting to production. |
 
@@ -309,7 +309,7 @@ The core pillars of MLOps on Azure are:
 | Security & Access Control Practice | Consideration |
 |---|---|
 | **Least-privilege RBAC** | Apply minimal permissions at every layer: Azure ML Workspace, Storage Account, Key Vault, and compute. |
-| **Secret management** | Store all secrets in **Azure Key Vault** — never in code, baked-in environment variables, or `terraform.tfvars` committed to source control. |
+| **Secret management** | Store all secrets in **Azure Key Vault**, never in code, baked-in environment variables, or `terraform.tfvars` committed to source control. |
 | **Managed Identity** | Use System-Assigned or User-Assigned Managed Identity for all Azure ML resources to eliminate credential management entirely. |
 | **Private endpoints** | Enable private endpoints for the Azure ML Workspace, Storage, Key Vault, and Container Registry in production to eliminate public internet exposure. |
 
@@ -323,7 +323,7 @@ The core pillars of MLOps on Azure are:
 | Cost Management Practice | Consideration |
 |---|---|
 | **Budget alerts** | Configure budget alerts in Azure Cost Management for the ML resource group to catch unexpected spend early. |
-| **Scale-to-zero training** | Use compute clusters that scale to zero nodes when idle — never leave clusters running between jobs. |
+| **Scale-to-zero training** | Use compute clusters that scale to zero nodes when idle, never leave clusters running between jobs. |
 | **Dev instance shutdown** | Schedule automatic shutdown for compute instances used for development (e.g., nightly shutdown policy). |
 | **Workspace hygiene** | Regularly review and delete unused model versions, stale datasets, and old pipeline run logs that accumulate over time. |
 | **Reserved Instances** | Use Reserved Instances for stable, predictable production endpoint compute to reduce costs by up to 40%. |
