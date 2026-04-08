@@ -28,14 +28,14 @@ Last updated: 2026-04-08
 
 - [What is MLOps?](#what-is-mlops)
 - [MLOps Maturity Levels](#mlops-maturity-levels)
-- [Phase 1 — Problem Definition & Business Understanding](#phase-1--problem-definition--business-understanding)
-- [Phase 2 — Data Management & Preparation](#phase-2--data-management--preparation)
-- [Phase 3 — Model Development & Experimentation](#phase-3--model-development--experimentation)
-- [Phase 4 — Model Training at Scale](#phase-4--model-training-at-scale)
-- [Phase 5 — Model Evaluation & Validation](#phase-5--model-evaluation--validation)
-- [Phase 6 — Model Deployment & Serving](#phase-6--model-deployment--serving)
-- [Phase 7 — Monitoring & Observability](#phase-7--monitoring--observability)
-- [Phase 8 — Retraining & Continuous Improvement](#phase-8--retraining--continuous-improvement)
+- [Phase 1: Problem Definition & Business Understanding](#phase-1--problem-definition--business-understanding)
+- [Phase 2: Data Management & Preparation](#phase-2--data-management--preparation)
+- [Phase 3: Model Development & Experimentation](#phase-3--model-development--experimentation)
+- [Phase 4: Model Training at Scale](#phase-4--model-training-at-scale)
+- [Phase 5: Model Evaluation & Validation](#phase-5--model-evaluation--validation)
+- [Phase 6: Model Deployment & Serving](#phase-6--model-deployment--serving)
+- [Phase 7: Monitoring & Observability](#phase-7--monitoring--observability)
+- [Phase 8: Retraining & Continuous Improvement](#phase-8--retraining--continuous-improvement)
 - [Cross-Cutting Concerns](#cross-cutting-concerns)
 - [Infrastructure as Code](#infrastructure-as-code)
 
@@ -77,7 +77,7 @@ The core pillars of MLOps on Azure are:
 > [!TIP]
 > Start by assessing your current maturity level honestly. Most organizations land at Level 0 or 1. Focus on progressing one level at a time rather than trying to implement everything at once.
 
-## Phase 1 — Problem Definition & Business Understanding
+## Phase 1: Problem Definition & Business Understanding
 
 > Before writing a single line of code, align on what success looks like. This phase is often underestimated but is the single biggest determinant of whether an ML project delivers value.
 
@@ -98,7 +98,7 @@ The core pillars of MLOps on Azure are:
 | **Responsible AI documentation** | Establish a **Model Card** or **AI Use Case Description** early — this feeds directly into Responsible AI documentation later. |
 | **Service Level Agreements** | Define **SLAs** for model latency, availability, and retraining frequency before any architecture decisions are made. |
 
-## Phase 2 — Data Management & Preparation
+## Phase 2: Data Management & Preparation
 
 > Data is the foundation of every ML system. Azure provides a rich ecosystem for storing, versioning, and transforming data at scale.
 
@@ -128,7 +128,7 @@ The core pillars of MLOps on Azure are:
 | **Secure storage** | Store sensitive data in **Azure Data Lake Storage Gen2** with hierarchical namespace enabled, access controlled via Azure RBAC and ACLs — never embed credentials in code. |
 | **Data protection** | Enable **soft delete** and **versioning** on Azure Blob/ADLS to protect against accidental deletion. |
 
-## Phase 3 — Model Development & Experimentation
+## Phase 3: Model Development & Experimentation
 
 > This phase is the most iterative. The goal is to rapidly explore hypotheses, track experiments, and identify the best modeling approach.
 
@@ -158,7 +158,7 @@ The core pillars of MLOps on Azure are:
 | **Code separation** | Separate **research code** (notebooks) from **production code** (Python modules). Notebooks are great for exploration but not for pipelines. |
 | **Environment management** | Register **compute environments** as Azure ML Environments so the same Docker image is used in local dev, CI, and production training. |
 
-## Phase 4 — Model Training at Scale
+## Phase 4: Model Training at Scale
 
 > Once you have a promising approach, move from interactive notebooks to **automated, parameterized training pipelines** that can run reliably on cloud compute.
 
@@ -189,8 +189,7 @@ The core pillars of MLOps on Azure are:
 | **Named outputs** | Store all training outputs (model artifacts, metrics, logs) as named outputs in the pipeline for automatic tracking and lineage. |
 | **Pinned environments** | Pin the **Azure ML Environment** (Docker image + conda/pip dependencies) so training is fully reproducible months later. |
 
-
-## Phase 5 — Model Evaluation & Validation
+## Phase 5: Model Evaluation & Validation
 
 > A model that performs well on a held-out test set is not automatically ready for production. Validation must go beyond aggregate metrics.
 
@@ -222,8 +221,7 @@ The core pillars of MLOps on Azure are:
 | **Champion comparison** | Always compare the new model against the **currently deployed champion** on the same test dataset, not just an absolute threshold. |
 | **Model tagging & lineage** | Tag every registered model with training data version, pipeline run ID, Git commit SHA, and key metrics to ensure full traceability. |
 
-
-## Phase 6 — Model Deployment & Serving
+## Phase 6: Model Deployment & Serving
 
 > Getting a validated model to production in a reliable, secure, and observable way.
 
@@ -253,8 +251,7 @@ The core pillars of MLOps on Azure are:
 | **Smoke & integration tests** | Run automated tests against the staging deployment in the CD pipeline before promoting to production. |
 | **Registry-based deployments** | Reference model artifacts from the **Azure ML Model Registry** by name and version — never copy files manually. |
 
-
-## Phase 7 — Monitoring & Observability
+## Phase 7: Monitoring & Observability
 
 > A deployed model is not "done." Its performance degrades over time as the real world changes. Monitoring is what keeps production models healthy.
 
@@ -277,8 +274,7 @@ The core pillars of MLOps on Azure are:
 | **Baseline dataset** | Store a baseline dataset (training data or representative sample) at deployment time — Azure ML uses this as the reference distribution for drift calculations. |
 | **Ground truth collection** | Collect and store ground truth labels wherever possible to compute actual model performance metrics in production. |
 
-
-## Phase 8 — Retraining & Continuous Improvement
+## Phase 8: Retraining & Continuous Improvement
 
 > Models must evolve with the data. The goal of this phase is a closed-loop system where monitoring signals feed back into the training pipeline automatically or with minimal human intervention.
 
@@ -349,7 +345,6 @@ PR / Push to main
 
 > [!NOTE]
 > Use **GitHub Actions** (preferred for open source / GitHub-native projects) or **Azure DevOps Pipelines** for CI/CD. Both have first-class Azure ML integration via the `azure/ml` GitHub Actions or `AzureML` DevOps tasks.
-
 
 ## Infrastructure as Code
 
