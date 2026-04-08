@@ -28,20 +28,18 @@ Last updated: 2026-04-08
 
 - [What is MLOps?](#what-is-mlops)
 - [MLOps Maturity Levels](#mlops-maturity-levels)
-- [Phase 1: Problem Definition & Business Understanding](#phase-1--problem-definition--business-understanding)
-- [Phase 2: Data Management & Preparation](#phase-2--data-management--preparation)
-- [Phase 3: Model Development & Experimentation](#phase-3--model-development--experimentation)
-- [Phase 4: Model Training at Scale](#phase-4--model-training-at-scale)
-- [Phase 5: Model Evaluation & Validation](#phase-5--model-evaluation--validation)
-- [Phase 6: Model Deployment & Serving](#phase-6--model-deployment--serving)
-- [Phase 7: Monitoring & Observability](#phase-7--monitoring--observability)
-- [Phase 8: Retraining & Continuous Improvement](#phase-8--retraining--continuous-improvement)
+- [Phase 1: Problem Definition & Business Understanding](#phase-1-problem-definition--business-understanding)
+- [Phase 2: Data Management & Preparation](#phase-2-data-management--preparation)
+- [Phase 3: Model Development & Experimentation](#phase-3-model-development--experimentation)
+- [Phase 4: Model Training at Scale](#phase-4-model-training-at-scale)
+- [Phase 5: Model Evaluation & Validation](#phase-5-model-evaluation--validation)
+- [Phase 6: Model Deployment & Serving](#phase-6-model-deployment--serving)
+- [Phase 7: Monitoring & Observability](#phase-7-monitoring--observability)
+- [Phase 8: Retraining & Continuous Improvement](#phase-8-retraining--continuous-improvement)
 - [Cross-Cutting Concerns](#cross-cutting-concerns)
 - [Infrastructure as Code](#infrastructure-as-code)
 
 </details>
-
-
 ## What is MLOps?
 
 > MLOps (Machine Learning Operations) is a set of practices that combines **Machine Learning**, **DevOps**, and **Data Engineering** to reliably and efficiently deploy and maintain ML models in production. It is the discipline of applying DevOps principles (automation, CI/CD, versioning, monitoring, etc) to the full ML lifecycle.
