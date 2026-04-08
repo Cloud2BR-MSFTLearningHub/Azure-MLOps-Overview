@@ -40,6 +40,7 @@ Last updated: 2026-04-08
 - [Infrastructure as Code](#infrastructure-as-code)
 
 </details>
+
 ## What is MLOps?
 
 > MLOps (Machine Learning Operations) is a set of practices that combines **Machine Learning**, **DevOps**, and **Data Engineering** to reliably and efficiently deploy and maintain ML models in production. It is the discipline of applying DevOps principles (automation, CI/CD, versioning, monitoring, etc) to the full ML lifecycle.
