@@ -2,8 +2,7 @@
 
 Costa Rica
 
-[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/)  
-[brown9804](https://github.com/brown9804)
+[![GitHub](https://img.shields.io/badge/--181717?logo=github&logoColor=ffffff)](https://github.com/) [Cloud2BR OSS - Learning Hub](https://github.com/Cloud2BR-MSFTLearningHub)
 
 Last updated: 2025-07-16
 
@@ -11,7 +10,7 @@ Last updated: 2025-07-16
 
 > Terraform configurations for setting up an Azure Machine Learning workspace along with compute clusters and supportive resources to form the core of an ML platform.  
 > `Remember, managing your infrastructure through code (IaC) not only ensures consistency, but also offers version control, reproducibility, and collaboration benefits—essential for scalable ML operations.`
-> For additional Terraform templates covering various Azure services, check out [this repository](https://github.com/MicrosoftCloudEssentials-LearningHub/AzureTerraformTemplates-v0.0.0). Explore and borrow ideas as needed!
+> For additional Terraform templates covering various Azure services, check out [this repository](https://github.com/Cloud2BR-MSFTLearningHub/AzureTerraformTemplates-v0.0.0). Explore and borrow ideas as needed!
 
 > [!TIP]
 > **About Infrastructure via Terraform**: Terraform is a powerful IaC tool that enables you to define and provision your cloud resources through a high-level configuration language. This approach keeps not only your application objects under source control but also the infrastructure code, ensuring reproducible environments across development, testing, and production. Microsoft also offers additional IaC tools like Bicep and ARM templates, giving you flexibility in how you manage your Azure resources.
@@ -25,7 +24,7 @@ Last updated: 2025-07-16
 
 - [Azure Machine Learning Documentation](https://learn.microsoft.com/en-us/azure/machine-learning/)
 - [Terraform Azure Provider Documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
-- [Azure Terraform Templates](https://github.com/MicrosoftCloudEssentials-LearningHub/AzureTerraformTemplates-v0.0.0)
+- [Azure Terraform Templates](https://github.com/Cloud2BR-MSFTLearningHub/AzureTerraformTemplates-v0.0.0)
 </details>
 
 <details>
