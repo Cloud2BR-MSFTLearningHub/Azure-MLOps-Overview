@@ -306,27 +306,11 @@ The core pillars of MLOps on Azure are:
 
 > These concerns apply across all phases and should be addressed from the start of the project.
 
-| Security & Access Control Practice | Consideration |
+| Category | Practices & Considerations |
 |---|---|
-| **Least-privilege RBAC** | Apply minimal permissions at every layer: Azure ML Workspace, Storage Account, Key Vault, and compute. |
-| **Secret management** | Store all secrets in **Azure Key Vault**, never in code, baked-in environment variables, or `terraform.tfvars` committed to source control. |
-| **Managed Identity** | Use System-Assigned or User-Assigned Managed Identity for all Azure ML resources to eliminate credential management entirely. |
-| **Private endpoints** | Enable private endpoints for the Azure ML Workspace, Storage, Key Vault, and Container Registry in production to eliminate public internet exposure. |
-
-| Governance & Compliance Practice | Consideration |
-|---|---|
-| **Azure Policy** | Assign policies to enforce organizational standards: allowed regions, required tags, mandatory encryption settings across all Azure ML resources. |
-| **Resource tagging** | Attach required tags (`environment`, `project`, `owner`, `cost-center`) to all resources to enable cost allocation and governance reporting. |
-| **Responsible AI artifacts** | Use the Azure ML Responsible AI Dashboard to generate an RAI assessment artifact for every model version promoted to production. |
-| **Audit trail** | Maintain a record of all model registrations, deployments, and endpoint configuration changes via Azure Activity Log. |
-
-| Cost Management Practice | Consideration |
-|---|---|
-| **Budget alerts** | Configure budget alerts in Azure Cost Management for the ML resource group to catch unexpected spend early. |
-| **Scale-to-zero training** | Use compute clusters that scale to zero nodes when idle, never leave clusters running between jobs. |
-| **Dev instance shutdown** | Schedule automatic shutdown for compute instances used for development (e.g., nightly shutdown policy). |
-| **Workspace hygiene** | Regularly review and delete unused model versions, stale datasets, and old pipeline run logs that accumulate over time. |
-| **Reserved Instances** | Use Reserved Instances for stable, predictable production endpoint compute to reduce costs by up to 40%. |
+| **Security & Access Control** | - **Least-privilege RBAC**: Apply minimal permissions at every layer: Workspace, Storage Account, Key Vault, and compute.<br>- **Secret management**: Store all secrets in **Azure Key Vault**, never in code, baked-in environment variables, or `terraform.tfvars`.<br>- **Managed Identity**: Use System-Assigned or User-Assigned Managed Identity to eliminate credential management entirely.<br>- **Private endpoints**: Enable private endpoints for Workspace, Storage, Key Vault, and Container Registry in production. |
+| **Governance & Compliance** | - **Azure Policy**: Enforce organizational standards, allowed regions, required tags, mandatory encryption settings.<br>- **Resource tagging**: Attach tags (`environment`, `project`, `owner`, `cost-center`) to all resources for cost allocation and reporting.<br>- **Responsible AI artifacts**: Generate an RAI assessment artifact for every model version promoted to production.<br>- **Audit trail**: Track all model registrations, deployments, and config changes via Azure Activity Log. |
+| **Cost Management** | - **Budget alerts**: Configure alerts in Azure Cost Management for the ML resource group to catch unexpected spend early.<br>- **Scale-to-zero training**: Use compute clusters that scale to zero nodes when idle, never leave clusters running between jobs.<br>- **Dev instance shutdown**: Schedule automatic shutdown for development compute instances (e.g., nightly policy).<br>- **Workspace hygiene**: Regularly delete unused model versions, stale datasets, and old pipeline run logs.<br>- **Reserved Instances**: Use Reserved Instances for production endpoint compute to reduce costs by up to 40%. |
 
 > CI/CD Pipeline Structure: A typical MLOps CI/CD pipeline on Azure looks like.
 
