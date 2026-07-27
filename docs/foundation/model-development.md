@@ -2,6 +2,13 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Track experiments with MLflow](https://learn.microsoft.com/azure/machine-learning/how-to-use-mlflow)
+
+</details>
+
 Development should optimize learning speed without sacrificing reproducibility.
 Use notebooks for exploration, then move validated logic into version-controlled
 Python modules and pipeline components.
@@ -34,5 +41,3 @@ such as latency, model size, and inference cost.
 | Reliability | Repeatable results with the same data, code, and environment. |
 | Fairness | Approved assessment for the scenario and known limitations. |
 | Operability | Inference time, resource requirements, and failure handling within service objectives. |
-
-Reference: [Track experiments with MLflow](https://learn.microsoft.com/azure/machine-learning/how-to-use-mlflow).

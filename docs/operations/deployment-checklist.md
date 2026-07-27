@@ -2,6 +2,14 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [MLOps maturity model](https://learn.microsoft.com/azure/architecture/ai-ml/guide/mlops-maturity-model)
+- [Model management and deployment with Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/concept-model-management-and-deployment)
+
+</details>
+
 Use this checklist as a staged control before a model reaches production.
 
 ## Foundation

@@ -2,6 +2,14 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Secure Azure Machine Learning workspace resources](https://learn.microsoft.com/azure/machine-learning/how-to-secure-workspace-vnet)
+- [Manage costs for Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/how-to-manage-costs)
+
+</details>
+
 Security, governance, and cost controls must apply across the lifecycle rather
 than being added only to production deployment.
 

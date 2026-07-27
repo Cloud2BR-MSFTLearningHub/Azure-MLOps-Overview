@@ -2,6 +2,13 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Responsible AI in Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai)
+
+</details>
+
 > **Business example:** A lender uses a model to prioritize applications for
 > review. The business outcome is faster decisions, but the release criteria
 > must also ensure the model does not create unjustified differences in outcomes
@@ -39,5 +46,3 @@ appropriate for the scenario.
 | Error analysis | Failure slices, edge cases, and actions for material weaknesses. |
 | Privacy and security | Data classification, access paths, retention, and approved use. |
 | Human oversight | Escalation, override, and rollback procedures for consequential decisions. |
-
-Reference: [Responsible AI in Azure Machine Learning](https://learn.microsoft.com/azure/machine-learning/concept-responsible-ai).

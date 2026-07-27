@@ -2,6 +2,13 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Azure Machine Learning data assets](https://learn.microsoft.com/azure/machine-learning/how-to-create-data-assets)
+
+</details>
+
 Reliable models require traceable, secure, and representative data. Register the
 data used by every training run as a versioned Azure Machine Learning data asset
 so the model can be reproduced and audited.
@@ -36,5 +43,3 @@ so the model can be reproduced and audited.
 | Secrets | Store credentials in Azure Key Vault. Do not include them in code or data paths. |
 | Protection | Enable soft delete and versioning where supported; define retention requirements. |
 | Data contracts | Fail the pipeline when input schema or quality thresholds are violated. |
-
-Reference: [Azure Machine Learning data assets](https://learn.microsoft.com/azure/machine-learning/how-to-create-data-assets).

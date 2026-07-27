@@ -2,6 +2,13 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Monitor models in production](https://learn.microsoft.com/azure/machine-learning/concept-model-monitoring)
+
+</details>
+
 Deployment is the beginning of the operational lifecycle. Monitor both the
 inference service and the model's behavior as real-world data changes.
 
@@ -28,5 +35,3 @@ inference service and the model's behavior as real-world data changes.
 
 Every retrained model remains a challenger. It must pass the same evaluation,
 approval, and deployment process as the original release.
-
-Reference: [Monitor models in production](https://learn.microsoft.com/azure/machine-learning/concept-model-monitoring).

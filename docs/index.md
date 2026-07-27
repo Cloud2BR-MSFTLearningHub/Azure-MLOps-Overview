@@ -2,6 +2,14 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Azure Machine Learning documentation](https://learn.microsoft.com/azure/machine-learning/)
+- [MLOps maturity model](https://learn.microsoft.com/azure/architecture/ai-ml/guide/mlops-maturity-model)
+
+</details>
+
 Azure Machine Learning Operations (MLOps) combines people, processes, and
 technology to deliver machine learning (ML) models reliably, repeatably, and
 responsibly. This hub turns the lifecycle into practical setup and operational

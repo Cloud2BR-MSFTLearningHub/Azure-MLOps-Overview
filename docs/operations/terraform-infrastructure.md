@@ -2,6 +2,14 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Repository Terraform infrastructure](https://github.com/Cloud2BR-MSFTLearningHub/Azure-MLOps-Overview/tree/main/terraform-infrastructure)
+- [Terraform Azure Provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs)
+
+</details>
+
 This repository includes Terraform configuration in
 [`terraform-infrastructure`](https://github.com/Cloud2BR-MSFTLearningHub/Azure-MLOps-Overview/tree/main/terraform-infrastructure)
 to provision an Azure Machine Learning workspace, compute clusters, and
@@ -48,5 +56,3 @@ To remove the demonstration resources when they are no longer required:
 ```sh
 terraform destroy -var-file terraform.tfvars
 ```
-
-Reference: [Terraform Azure Provider documentation](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs).

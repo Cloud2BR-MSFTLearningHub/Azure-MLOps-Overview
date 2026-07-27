@@ -65,3 +65,26 @@
 }
 .guide-card:hover { box-shadow: 0 7px 18px rgba(0, 51, 102, 0.12); color: inherit; }
 @media screen and (max-width: 44rem) { .guide-grid { grid-template-columns: 1fr; } }
+
+.process-flow {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 1.25rem;
+}
+.process-step {
+  background: #f4f8fc;
+  border: 1px solid #c9d9ea;
+  border-top: 3px solid var(--azure-blue);
+  border-radius: 6px;
+  color: #243447;
+  font-weight: 700;
+  padding: 0.65rem 0.8rem;
+  text-align: center;
+}
+.process-arrow { color: var(--azure-blue); font-size: 1.25rem; font-weight: 700; }
+@media screen and (max-width: 44rem) {
+  .process-flow { align-items: stretch; flex-direction: column; }
+  .process-arrow { line-height: 0.8; text-align: center; transform: rotate(90deg); }
+}

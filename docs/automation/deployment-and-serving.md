@@ -2,6 +2,13 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Managed online endpoints](https://learn.microsoft.com/azure/machine-learning/concept-endpoints-online)
+
+</details>
+
 Choose the inference pattern based on the caller, latency expectation, traffic
 shape, and cost profile. Validate the model in a staging environment before
 routing production traffic.
@@ -32,5 +39,3 @@ routing production traffic.
 - Restrict production services with private endpoints and approved network paths.
 - Store no credentials in scoring scripts, deployment specifications, or source
   control.
-
-Reference: [Managed online endpoints](https://learn.microsoft.com/azure/machine-learning/concept-endpoints-online).

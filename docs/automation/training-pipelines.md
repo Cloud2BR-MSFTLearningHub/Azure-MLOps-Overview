@@ -2,21 +2,30 @@
 
 Last updated: 2026-07-27
 
+<details markdown>
+<summary>List of references</summary>
+
+- [Azure Machine Learning pipelines](https://learn.microsoft.com/azure/machine-learning/concept-ml-pipelines)
+
+</details>
+
 Azure Machine Learning pipelines turn a successful experiment into a repeatable,
 parameterized training process. Define each major step as a reusable component
 with typed inputs, outputs, and configuration.
 
 ## Pipeline design
 
-```mermaid
-flowchart LR
-    A[Versioned data asset] --> B[Validate and prepare]
-    B --> C[Train]
-    C --> D[Evaluate]
-    D --> E{Release gates pass?}
-    E -->|Yes| F[Register candidate model]
-    E -->|No| G[Review and improve]
-```
+<div class="process-flow" role="img" aria-label="Training pipeline process flow">
+  <div class="process-step">Versioned data asset</div>
+  <div class="process-arrow" aria-hidden="true">&rarr;</div>
+  <div class="process-step">Validate and prepare</div>
+  <div class="process-arrow" aria-hidden="true">&rarr;</div>
+  <div class="process-step">Train</div>
+  <div class="process-arrow" aria-hidden="true">&rarr;</div>
+  <div class="process-step">Evaluate</div>
+  <div class="process-arrow" aria-hidden="true">&rarr;</div>
+  <div class="process-step">Register approved model</div>
+</div>
 
 | Step | Purpose |
 | --- | --- |
@@ -41,5 +50,3 @@ flowchart LR
     Pipeline output reuse can make iterative development faster, but a change in
     data, parameters, code, or environment should intentionally invalidate the
     affected output.
-
-Reference: [Azure Machine Learning pipelines](https://learn.microsoft.com/azure/machine-learning/concept-ml-pipelines).
