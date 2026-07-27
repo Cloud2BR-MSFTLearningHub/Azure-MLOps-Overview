@@ -35,3 +35,18 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rc
+
+# MkDocs and Python build artifacts
+site/
+.cache/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Node and editor artifacts
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

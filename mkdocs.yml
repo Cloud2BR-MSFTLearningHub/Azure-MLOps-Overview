@@ -1,0 +1,65 @@
+site_name: Azure MLOps Setup and Overview Hub
+site_description: Deployment and operations guidance for Azure Machine Learning Operations.
+site_url: https://cloud2br-msftlearninghub.github.io/azure-mlops-overview/
+repo_url: https://github.com/Cloud2BR-MSFTLearningHub/Azure-MLOps-Overview
+repo_name: Cloud2BR-MSFTLearningHub/Azure-MLOps-Overview
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+copyright: Copyright &copy; 2026 <a href="https://github.com/Cloud2BR-MSFTLearningHub" target="_blank" rel="noopener">Cloud2BR OSS - Learning Hub</a>
+
+theme:
+  name: material
+  logo: https://avatars.githubusercontent.com/u/195347873?v=4
+  favicon: https://avatars.githubusercontent.com/u/195347873?v=4
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: blue
+    accent: blue
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      permalink: true
+
+extra_css:
+  - assets/css/custom.css
+extra_javascript:
+  - assets/js/logo-link.js
+  - assets/js/external-links.js
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/Cloud2BR-MSFTLearningHub
+      name: Cloud2BR OSS - Learning Hub
+
+nav:
+  - Home: index.md
+  - MLOps overview: overview.md
+  - Foundation:
+      - Business problem and responsible AI: foundation/business-and-responsible-ai.md
+      - Data management: foundation/data-management.md
+      - Model development: foundation/model-development.md
+  - Automation and deployment:
+      - Training pipelines: automation/training-pipelines.md
+      - Evaluation and validation: automation/evaluation-and-validation.md
+      - Deployment and serving: automation/deployment-and-serving.md
+      - Monitoring and retraining: automation/monitoring-and-retraining.md
+  - Operations:
+      - Security, governance, and cost: operations/security-governance-and-cost.md
+      - Terraform infrastructure: operations/terraform-infrastructure.md
+      - Deployment checklist: operations/deployment-checklist.md
